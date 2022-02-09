@@ -1,0 +1,21 @@
+html, body
+{
+	height: 100%;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body
+{
+	background-color: BurlyWood;
+}
+
+*
+{
+	box-sizing: border-box;
+}
+
+#para
+{
+	column-count: 2;
+}

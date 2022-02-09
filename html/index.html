@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../styles/index.css">
+	</head>
+	<body>
+		<h2>What Can JavaScript Do?</h2>
+		<p id="demo">JavaScript can change HTML content.</p>
+		<button type="button" onclick='changePara()'>Click Me!</button>
+		<button type="button" onclick='changeColumnCount()'>ChangeColumnCount</button>
+		<button type="button" onclick='printPage()'>Print this page</button>
+		<button type="button" onclick='checkVarandLet()'>Check var and let</button>
+		<button type="button" onclick='carNameChanger()'>Car Change</button>
+		<button type="button" onclick='person.fullName()'>Get Full Name</button>
+		<button type="button" onclick='showTime()'>Show Time</button>
+
+		<p id="para">
+			File NamesFile names should be all lower case and may include underscores or dashes.We shouldn’t put any additional punctuation in our file names.The file names should end in .js so that we know that it’s a JavaScript file.For instance, foo.js is a good file name.File EncodingThe encoding of the file should be UTF-8. This is standard across all platforms so that it won’t cause issues when we run them anywhere.White Space CharactersThe ASCII horizontal whitespace character should be the only one in source files.Other whitespace characters should be escaped.Tabs shouldn’t be used for indentation since they may be interpreted differently in different platforms.However, tabs can be converted to spaces automatically.Special Escape SequencesSpecial escape sequences should have a corresponding numeric escape.So \' is the same as \x27 , for example.Non-ASCII CharactersWe should use Unicode equivalent for non-ASCII characters in our code files.Source File StructureWe may want to enforce some structure in our source files.For instance, we may have JSDoc comments for documentation.We may put them in folders so that there’s a clear hierarchy in our project structure.ES ModulesModules are used in most new JavaScript projects now.Therefore, we should be mindful of some rules regarding modules.Import LengthLength of import statements should be 100 characters or less so they won’t overflow the screen.This way, no one has to scroll horizontally to read the whole line.Import PathsWe should use the import sattement to import ES modules.For instance, we can write:
+		</p>
+		<p id="get-name">Some string</p>
+		<p id="show-time" onchange='detectChange()'>Change detection</p>
+		<button type="button" id="hower-over-detect" onmouseover='ditectMouseOver()'>Mouse Detection</button>
+
+		<button type="button" onclick='this.innerHTML = Date()'>Date Here1</button>
+		<button type="button" id="date-button" onclick='showTimeInButton()'>Date Here2</button>
+		<button type="button" id="template-button" onclick='templateLiterals()'>template-button</button>
+		<button type="button" id="loopExample" onclick='loopExample()'>Loop Example</button>
+
+		<p id="template"></p>
+
+		<div id="templatesInDiv"></div>
+
+		<script type="text/javascript" src="../scripts/common_functions.js"></script>
+	</body>
+</html>
