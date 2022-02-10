@@ -113,8 +113,85 @@ function loopExample()
 	{
 		temp += `<li>${x}</li>`;
 	}
+
+	let y = 0.2 +0.1;
+	let yTemp = `<li>${y}</li>`;
+	let dTemp = `<li>${Date()}</li>`;
+
+	// let d = new Date(dateTime.getTime());
+	// d.setHours(0, 0, 0, 0);
+	let dnTemp = `<li>${WithoutTime()}</li>`;
+	let dnowTemp = `<li>${Date.now()}</li>`;
+
+	temp += dnowTemp;
+	temp += dnTemp;
+	temp += dTemp;
+	temp += yTemp;
 	temp += "</ul>";
 
-	
+
 	document.getElementById("templatesInDiv").innerHTML = temp;
+}
+
+function WithoutTime() 
+{
+    var date = new Date();
+    date.setHours(0, 0, 0, 0);
+    return date;
+}
+
+function sortArray()
+{
+	const fruits = ["Mango", "Apple", "Orange", "Pinapple"];
+	fruits.sort();
+	let temp = "<ul>";
+	for(let x of fruits)
+	{
+		temp += `<li>${x}</li>`;
+	}
+	temp += "</ul>";
+
+	const numArr = [45, 67, 34,6, 35, 76, 87, 21];
+	numArr.sort(function(a, b){ return a-b })
+
+	let temp2 = "<ul>";
+	for(let y of numArr)
+	{
+		temp2 += `<li>${y}</li>`;
+	}
+	temp2 += "</ul>";
+
+	document.getElementById("sorted-div").innerHTML = temp + "<br>" + temp2;
+}
+
+function shuffleArrayData()
+{
+	const randArr = [34, 56, 68, 25, 76, 91, 83, 66, 52, 64, 77, 99];
+
+	document.getElementById("shuffle-array").innerHTML = randArr.sort(function(a, b){return 0.5 - Math.random()});
+	document.getElementById("math").innerHTML = Math.random();
+}
+
+function fisherYetesMethod()
+{
+	const numList = [12, 32, 23, 34, 43, 45, 54, 56, 65, 76, 67, 78, 89];
+
+	for (let i = 0; i < numList.length - 1; i++)
+	{
+		let a = Math.floor(Math.random() * i);
+		let b = numList[i];
+		numList[i] = numList[a];
+		numList[a] = b;
+		console.log(i);
+	}
+
+	// creating the template
+	let temp = "<ul>";
+	for(let j of numList)
+	{
+		temp += `<li>${j}</li>`;
+	}
+	temp += "</ul>"
+
+	document.getElementById("fisher-yates").innerHTML = temp
 }
