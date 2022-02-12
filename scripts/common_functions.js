@@ -262,3 +262,69 @@ function funcFilter(value, index, array)
 	console.log(value + " " + index + " " + array);
 	return value > 5;
 }
+
+function reduceExample()
+{
+	const numArr = [1,2,3,4,5,6,7,8,9,12,34,45,67,78];
+	let sum = numArr.reduce(funcReduce);
+	console.log(sum)
+	document.getElementById("reduce-button").innerHTML = sum;
+}
+
+function funcReduce(total, val, index, arr)
+{
+	return total+val;
+}
+
+function checkExample()
+{
+	const numArr = [1,2,3,4,5,6,7,8,9,78,67,56,45,33,23,12,34,65,55,77,99,33];
+
+	// checking whether the numset is grater than 5 or not
+	let ret1 = numArr.every(funcEvery_5);
+
+	// checking whether the numset is lesser than 100 or not
+	let ret2 = numArr.every(funcEvery_100);
+
+	document.getElementById("every-button").innerHTML = ret1 + " and " + ret2;
+}
+
+function funcEvery_5(a,b,c)
+{
+	console.log(a + " " + b + " " + c);
+	return a > 5;
+}
+
+function funcEvery_100(a,b,c)
+{
+	console.log(a + " " + b + " " + c);
+	return a < 100
+}
+
+function someExample()
+{
+	const numArr = [1,2,3,4,5,6,7,8,9,10,12,23,34,45,56,78,89,87,76,54,43,32,21];
+	let bOver30 = numArr.some(funcSome);
+	document.getElementById("some-func").innerHTML = bOver30;
+}
+
+function funcSome(value, index, array)
+{
+	return value > 30;
+}
+
+function indexOfExample()
+{
+	const fruitsArr = ["apple", "mango", "papaya", "lemon", "pin-apple", "orange", "stroberry"];
+	let position = fruitsArr.indexOf("papaya");
+
+	document.getElementById("indexof-example").innerHTML = position;
+}
+
+function indexOfExampleBack()
+{
+	const fruitsArr = ["apple", "mango", "papaya", "lemon", "pin-apple", "orange", "stroberry"];
+	let position = fruitsArr.indexOf("lemon", 2);
+
+	document.getElementById("indexof-example-back").innerHTML = position;
+}
