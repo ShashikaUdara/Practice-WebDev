@@ -328,3 +328,25 @@ function indexOfExampleBack()
 
 	document.getElementById("indexof-example-back").innerHTML = position;
 }
+
+function lastIndexOfExample()
+{
+	const fruitsArr = ["apple", "mango", "papaya", "lemon", "pin-apple", "orange", "lemon", "stroberry"];
+	let position = fruitsArr.lastIndexOf("lemon");
+
+	document.getElementById("last-indexof-example").innerHTML = position;
+}
+
+function findExample()
+{
+	const fruitsArr = ["apple", "mango", "papaya", "lemon", "pin-apple", "orange", "lemon", "stroberry"];
+	// finding the first occurence
+	let firstPosition = fruitsArr.find(funcFind);
+
+	document.getElementById("find-example").innerHTML = firstPosition;
+}
+
+function funcFind(value, index, array)
+{
+	return value == "lemon";
+}
