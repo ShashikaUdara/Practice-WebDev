@@ -1,4 +1,5 @@
 var counterCar = 0;
+let g_temp = 0;
 
 const person = {
 	firstName: "Udara",
@@ -194,4 +195,70 @@ function fisherYetesMethod()
 	temp += "</ul>"
 
 	document.getElementById("fisher-yates").innerHTML = temp
+}
+
+function forEachExample()
+{
+	const numArr = [12, 23, 34, 45, 45, 56, 67, 78];
+
+	g_temp = "<ul><li>Example</li>";
+	numArr.forEach(funcForEach);
+	g_temp += "</ul>";
+
+	document.getElementById("for-each").innerHTML = g_temp
+}
+
+function funcForEach(value, index, array)
+{
+	console.log(value + " " + index + " " + array);
+	// creating the template
+	g_temp += `<li>${index}] ${value}</li>`;
+
+}
+
+function mapExample()
+{
+	const numArr = [90, 34, 65, 32, 21, 54, 756, 456, 7777, 67, 56, 98, 34, 56, 44, 65];
+	const numArr2 = numArr.map(funcMap);
+
+	// creating the template
+	let temp = "<ul>";
+
+	for(let x of numArr2)
+	{
+		temp += `<li>${x}</li>`;
+		console.log("array element : " + x)
+	}
+	temp += "</ul>";
+
+	document.getElementById("map-example").innerHTML = temp;
+}
+
+function funcMap(value, index, array)
+{
+	// console.log(value + " " + index + " " + array);
+	return value * 2;
+}
+
+function callFilter()
+{
+	const numArr = [1,2,3,4,5,6,7,8,9,23,45,67,78,43];
+	const outArr = numArr.filter(funcFilter);
+
+	// creating the template
+	let temp = "<ul>";
+
+	for(x of outArr)
+	{
+		temp += `<li>${x}</li>`;
+	}
+	temp += "</ul>";
+
+	document.getElementById("filter-func").innerHTML = temp;
+}
+
+function funcFilter(value, index, array)
+{
+	console.log(value + " " + index + " " + array);
+	return value > 5;
 }
