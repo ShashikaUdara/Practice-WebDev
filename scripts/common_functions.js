@@ -350,3 +350,38 @@ function funcFind(value, index, array)
 {
 	return value == "lemon";
 }
+
+function findMinAndMaxOfArray()
+{
+	const numArr = [1,2,3,4,5,6,7,8,9,10,12,23,34,45,56,78,89,87,76,54,43,32,21];
+	let minVal = Infinity;
+	let maxVal = -Infinity;
+
+	// get array length
+	let len = numArr.length;
+	let minAndMax = [Infinity, -Infinity];
+
+	while(len--)
+	{
+		if(numArr[len] < minAndMax[0])
+		{
+			console.log("Min - " + numArr[len]);
+			minAndMax[0] = numArr[len];
+		}
+		
+		if(numArr[len] > minAndMax[1])
+		{
+			console.log("Max - " + numArr[len]);
+			minAndMax[1] = numArr[len];
+		}
+	}
+
+	return minAndMax;
+}
+
+function displayMinAndMax()
+{
+	document.getElementById("min-and-max").innerHTML = "<ul><li>Max Val: " + findMinAndMaxOfArray()[0] + "</li><li>Min Val: " + 
+	findMinAndMaxOfArray()[1] + "</li></ul>"
+	console.log(findMinAndMaxOfArray());
+}
