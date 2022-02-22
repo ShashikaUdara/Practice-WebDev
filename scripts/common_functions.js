@@ -368,7 +368,7 @@ function findMinAndMaxOfArray()
 			console.log("Min - " + numArr[len]);
 			minAndMax[0] = numArr[len];
 		}
-		
+
 		if(numArr[len] > minAndMax[1])
 		{
 			console.log("Max - " + numArr[len]);
@@ -384,4 +384,104 @@ function displayMinAndMax()
 	document.getElementById("min-and-max").innerHTML = "<ul><li>Max Val: " + findMinAndMaxOfArray()[0] + "</li><li>Min Val: " + 
 	findMinAndMaxOfArray()[1] + "</li></ul>"
 	console.log(findMinAndMaxOfArray());
+}
+
+
+// sorting an array objects
+
+// Object array
+const cars = [
+	{type: "Acura", year: "2019"},
+	{type: "AlfRomeo", year: "1902"},
+	{type: "Audi", year: "2010"},
+	{type: "BMW", year: "1904"},
+	{type: "Bentley", year: "1906"},
+	{type: "Buick", year: "1952"},
+	{type: "Cadillac", year: "1929"},
+	{type: "Chevrolet", year: "1904"},
+	{type: "Chrysler", year: "1901"},
+	{type: "Dodge", year: "1979"},
+	{type: "Fiat", year: "1930"},
+	{type: "Ford", year: "1967"},
+	{type: "GMC", year: "1953"},
+	{type: "Genesis", year: "1915"},
+	{type: "Honda", year: "2002"},
+	{type: "Hyundai", year: "1961"},
+	{type: "Infiniti", year: "1920"},
+	{type: "Jaguar", year: "1998"},
+	{type: "Jeep", year: "1960"},
+	{type: "Kia", year: "1935"},
+	{type: "Land Rover", year: "1967"},
+	{type: "Lexus", year: "2002"},
+	{type: "Lincoln", year: "2002"},
+	{type: "Lotus", year: "1999"},
+	{type: "Lucid", year: "1939"},
+	{type: "Maserati", year: "1924"},
+	{type: "Mazda", year: "2011"},
+	{type: "Mercedes-Benz", year: "1911"},
+	{type: "Mercury*", year: "2000"},
+	{type: "Mini", year: "1979"},
+	{type: "Mitsubishi", year: "1916"},
+	{type: "Nissan", year: "2006"},
+	{type: "Polestar", year: "2010"},
+	{type: "Pontiac*", year: "1942"},
+	{type: "Porsche", year: "1936"},
+	{type: "Ram", year: "1933"},
+	{type: "Rivian", year: "1910"},
+	{type: "Rolls-Royce", year: "2008"},
+	{type: "Saab*", year: "1959"},
+	{type: "Saturn*", year: "1978"},
+	{type: "Scion*", year: "1923"},
+	{type: "Smart", year: "1918"},
+	{type: "Subaru", year: "1976"},
+	{type: "Suzuki*", year: "1981"},
+	{type: "Tesla", year: "1944"},
+	{type: "Toyota", year: "1938"},
+	{type: "Volkswagen", year: "2022"},
+	{type: "Volvo", year: "1906"}
+];
+
+function objArraySortYear()
+{
+	let sortedCarObjArray = cars.sort(function(a, b){return a.year - b.year;});
+	console.log(sortedCarObjArray)
+
+	// creating the template
+	let temp = "<ul>";
+
+	for(let i of sortedCarObjArray)
+	{
+		temp += `<li>${i.type} : ${i.year}</li>`;
+	}
+
+	temp += "</ul>";
+
+	document.getElementById("sortObjArray-year").innerHTML = temp;
+}
+
+function objArraySortType()
+{
+	let sortedCarObjArray = cars.sort(function(a, b){
+		let aa = a.type.toLowerCase();
+		let bb = b.type.toLowerCase();
+
+		if(aa > bb){return 1;}
+		if(aa < bb){return -1;}
+
+		return 0;
+	});
+
+	console.log(sortedCarObjArray)
+
+	// creating the template
+	let temp = "<ul>";
+
+	for(let i of sortedCarObjArray)
+	{
+		temp += `<li>${i.type} : ${i.year}</li>`;
+	}
+
+	temp += "</ul>";
+
+	document.getElementById("sortObjArray-type").innerHTML = temp;
 }
