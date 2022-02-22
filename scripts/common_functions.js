@@ -485,3 +485,19 @@ function objArraySortType()
 
 	document.getElementById("sortObjArray-type").innerHTML = temp;
 }
+
+
+function dateExampleNew()
+{
+	const today = new Date();
+
+	// getting year
+	let _year = today.getFullYear();
+	let _month = today.getMonth();
+	let _date = today.getDate();
+	let _hour = today.getHours();
+	let _munite = today.getMinutes();
+	let _second = today.getSeconds();
+
+	document.getElementById("display-date-time").innerHTML = _year+"-"+_month+"-"+_date+" "+_hour+":"+_munite+":"+_second;
+}
