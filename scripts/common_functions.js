@@ -501,3 +501,8 @@ function dateExampleNew()
 
 	document.getElementById("display-date-time").innerHTML = _year+"-"+_month+"-"+_date+" "+_hour+":"+_munite+":"+_second;
 }
+
+function setDateInToGivenData()
+{
+	
+}
