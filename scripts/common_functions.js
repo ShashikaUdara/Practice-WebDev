@@ -504,5 +504,7 @@ function dateExampleNew()
 
 function setDateInToGivenData()
 {
-	
+	let date_created = new Date(2012, 5, 5, 6, 20, 50, 0);
+
+	document.getElementById("show-date-2012-05-05-6-20-50-0").innerHTML = date_created;
 }
