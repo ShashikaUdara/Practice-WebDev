@@ -512,25 +512,34 @@ function setDateInToGivenData()
 
 function show_5_elements()
 {
-	
+	let dateTemp = new Date(2018,5,5,10,54);
+	document.getElementById("show-5-elements").innerHTML = dateTemp;
+
 }
 
 function show_4_elements()
 {
-	
+	let dateTemp = new Date(2018,5,5,10);
+	document.getElementById("show-4-elements").innerHTML = dateTemp;
+
 }
 
 function show_3_elements()
 {
-	
+	let dateTemp = new Date(2018,5,5);
+	document.getElementById("show-3-elements").innerHTML = dateTemp;
+
 }
 
 function show_2_elements()
 {
-	
+	let dateTemp = new Date(2018,5);
+	document.getElementById("show-2-elements").innerHTML = dateTemp;
+
 }
 
 function show_1_elements()
 {
-	
+	let dateTemp = new Date(2018);
+	document.getElementById("show-1-elements").innerHTML = dateTemp;
 }
