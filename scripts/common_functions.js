@@ -508,3 +508,29 @@ function setDateInToGivenData()
 
 	document.getElementById("show-date-2012-05-05-6-20-50-0").innerHTML = date_created;
 }
+
+
+function show_5_elements()
+{
+	
+}
+
+function show_4_elements()
+{
+	
+}
+
+function show_3_elements()
+{
+	
+}
+
+function show_2_elements()
+{
+	
+}
+
+function show_1_elements()
+{
+	
+}
