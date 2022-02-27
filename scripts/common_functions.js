@@ -540,6 +540,52 @@ function show_2_elements()
 
 function show_1_elements()
 {
-	let dateTemp = new Date(2018);
+	let dateTemp = new Date(2020);
 	document.getElementById("show-1-elements").innerHTML = dateTemp;
+}
+
+// Date inputs -passing dates
+function parseDate()
+{
+	let milli_sec = Date.parse("12 Mar 2022"); // getting milli seconds
+	console.log(milli_sec);
+
+	// converting milliseconds to the atual date
+	let dateFromMiliSec = new Date(milli_sec);
+
+	document.getElementById("date-from-milli-seconds").innerHTML = dateFromMiliSec;
+}
+
+// getting month and converting it to literal form
+function getMonthExample()
+{
+	const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+	let mon = new Date();
+
+	let _month = months[mon.getMonth()];
+
+	document.getElementById("month-example-string form").innerHTML = _month;
+}
+
+function compareDatesExample()
+{
+	let today = new Date();
+	let someday = new Date();
+	let temp = Date(document.getElementById("date-somday").value).toISOString();
+	
+	// temp = temp.replace(/-/g, ",");
+	// temp = temp.replace(/,0/g, ",")
+	// console.log(today + " " + temp);
+
+	// someday.setFullYear(temp);
+	console.log(today + " " + temp);
+
+	if(today < temp)
+	{
+		document.getElementById("today-someday-example").innerHTML = "Today is before some day";
+	}
+	else
+	{
+		document.getElementById("today-someday-example").innerHTML = "Today is after some day";
+	}
 }
