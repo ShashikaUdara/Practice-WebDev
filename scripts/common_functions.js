@@ -571,7 +571,7 @@ function compareDatesExample()
 {
 	let today = new Date();
 	let someday = new Date();
-	let temp = Date(document.getElementById("date-somday").value).toISOString();
+	let temp = new Date(document.getElementById("date-somday").value);
 	
 	// temp = temp.replace(/-/g, ",");
 	// temp = temp.replace(/,0/g, ",")
