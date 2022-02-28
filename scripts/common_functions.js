@@ -589,3 +589,30 @@ function compareDatesExample()
 		document.getElementById("today-someday-example").innerHTML = "Today is after some day";
 	}
 }
+
+function mathExample()
+{
+	// Math.E        // returns Euler's number
+	// Math.PI       // returns PI
+	// Math.SQRT2    // returns the square root of 2
+	// Math.SQRT1_2  // returns the square root of 1/2
+	// Math.LN2      // returns the natural logarithm of 2
+	// Math.LN10     // returns the natural logarithm of 10
+	// Math.LOG2E    // returns base 2 logarithm of E
+	// Math.LOG10E   // returns base 10 logarithm of E
+
+	mathArr = [Math.E, Math.PI, Math.SQRT2, Math.SQRT1_2, Math.LN2, Math.LN10, Math.LOG2E, Math.LOG10E];
+	mathArrLit = ["Math.E", "Math.PI", "Math.SQRT2", "Math.SQRT1_2", "Math.LN2", "Math.LN10", "Math.LOG2E", "Math.LOG10E"];
+
+	// creating the template
+	let temp = "<ul>";
+	let count = 0
+	for(let i of mathArr)
+	{
+		temp += `<li>${mathArrLit[count]}: ${i}</li>`;
+		count++;
+	}
+	temp += "</ul>";
+
+	document.getElementById("math-func-example").innerHTML = temp;
+}
