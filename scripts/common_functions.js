@@ -647,4 +647,8 @@ function mathBasicFunctionsExample()
 	document.getElementById("Math.max").innerHTML = "Math.max(mathArr2): " + Math.max(0, 150, 30, 20, -8, -200);
 	document.getElementById("Math.min").innerHTML = "Math.min(mathArr2): " + Math.min(0, 150, 30, 20, -8, -200);
 	document.getElementById("math-rand").innerHTML = "Math.floor(Math.random()*10): " + Math.floor(Math.random()*10);
+
+	document.getElementById("Math.log").innerHTML = "Math.log: " + Math.log(Math.floor(Math.random()*10));
+	document.getElementById("Math.log2").innerHTML = "Math.log2: " + Math.log2(Math.floor(Math.random()*100));
+	document.getElementById("Math.log10").innerHTML = "Math.log10: " + Math.log10(Math.floor(Math.random()*1000));
 }
