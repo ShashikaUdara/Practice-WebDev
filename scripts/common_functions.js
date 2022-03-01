@@ -616,3 +616,12 @@ function mathExample()
 
 	document.getElementById("math-func-example").innerHTML = temp;
 }
+
+// Number to Integer
+function numToIntigerExample()
+{
+	document.getElementById("math-num-to-int-roun").innerHTML = "Math.round(6.5): " + Math.round(6.5)
+	document.getElementById("math-num-to-int-ceil").innerHTML = "Math.ceil(6.5): " + Math.ceil(6.5)
+	document.getElementById("math-num-to-int-floo").innerHTML = "Math.floor(6.5): " + Math.floor(6.5)
+	document.getElementById("math-num-to-int-trun").innerHTML = "Math.trunc(6.5): " + Math.trunc(6.5)
+}
