@@ -646,4 +646,5 @@ function mathBasicFunctionsExample()
 	document.getElementById("Math.cos").innerHTML = "Math.cos(60 * Math.PI/180): " + Math.cos(60 * Math.PI/180);
 	document.getElementById("Math.max").innerHTML = "Math.max(mathArr2): " + Math.max(0, 150, 30, 20, -8, -200);
 	document.getElementById("Math.min").innerHTML = "Math.min(mathArr2): " + Math.min(0, 150, 30, 20, -8, -200);
+	document.getElementById("math-rand").innerHTML = "Math.floor(Math.random()*10): " + Math.floor(Math.random()*10);
 }
