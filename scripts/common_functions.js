@@ -625,3 +625,12 @@ function numToIntigerExample()
 	document.getElementById("math-num-to-int-floo").innerHTML = "Math.floor(6.5): " + Math.floor(6.5)
 	document.getElementById("math-num-to-int-trun").innerHTML = "Math.trunc(6.5): " + Math.trunc(6.5)
 }
+
+// sign example - Math.sign returns whether the number is negative positive or zero
+
+function signExample()
+{
+	document.getElementById("math-sign-positive").innerHTML = Math.sign(256);
+	document.getElementById("math-sign-zero").innerHTML = Math.sign(0);
+	document.getElementById("math-sign-negative").innerHTML = Math.sign(-125);
+}
