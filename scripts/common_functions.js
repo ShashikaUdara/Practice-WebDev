@@ -630,7 +630,20 @@ function numToIntigerExample()
 
 function signExample()
 {
-	document.getElementById("math-sign-positive").innerHTML = Math.sign(256);
-	document.getElementById("math-sign-zero").innerHTML = Math.sign(0);
-	document.getElementById("math-sign-negative").innerHTML = Math.sign(-125);
+	document.getElementById("math-sign-positive").innerHTML = "Math.sign(256): " + Math.sign(256);
+	document.getElementById("math-sign-zero").innerHTML = "Math.sign(0): " + Math.sign(0);
+	document.getElementById("math-sign-negative").innerHTML = "Math.sign(-125): " + Math.sign(-125);
+}
+
+// some basic math functions
+function mathBasicFunctionsExample()
+{
+	// let mathArr2 = [0, 150, 30, 20, -8, -200];
+	document.getElementById("Math.pow").innerHTML = "Math.pow(5, 5): " + Math.pow(5, 5);
+	document.getElementById("Math.sqr").innerHTML = "Math.sqrt(15): " + Math.sqrt(15);
+	document.getElementById("Math.abs").innerHTML = "Math.abs(-12.256): " + Math.abs(-12.256);
+	document.getElementById("Math.sin").innerHTML = "Math.sin(30 * Math.PI/180): " + Math.sin(30 * Math.PI/180);
+	document.getElementById("Math.cos").innerHTML = "Math.cos(60 * Math.PI/180): " + Math.cos(60 * Math.PI/180);
+	document.getElementById("Math.max").innerHTML = "Math.max(mathArr2): " + Math.max(0, 150, 30, 20, -8, -200);
+	document.getElementById("Math.min").innerHTML = "Math.min(mathArr2): " + Math.min(0, 150, 30, 20, -8, -200);
 }
