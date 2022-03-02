@@ -652,3 +652,13 @@ function mathBasicFunctionsExample()
 	document.getElementById("Math.log2").innerHTML = "Math.log2: " + Math.log2(Math.floor(Math.random()*100));
 	document.getElementById("Math.log10").innerHTML = "Math.log10: " + Math.log10(Math.floor(Math.random()*1000));
 }
+
+// A proper random function
+function randomFuncExample()
+{
+	// (Math.random() * (Max -Min)) + Min - Including Min, Excluding Max
+	document.getElementById("random-example1").innerHTML = (Math.random() * (100 - 1)) + 1; // range is 1 - 99
+	
+	// (Math.random() * (Max -Min) + 1) + Min - Including Min and Max
+	document.getElementById("random-example2").innerHTML = (Math.random() * (100 - 1) + 1) + 1; // range is 1 - 100
+}
