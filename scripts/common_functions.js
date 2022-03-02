@@ -662,3 +662,13 @@ function randomFuncExample()
 	// (Math.random() * (Max -Min) + 1) + Min - Including Min and Max
 	document.getElementById("random-example2").innerHTML = (Math.random() * (100 - 1) + 1) + 1; // range is 1 - 100
 }
+
+// JavaScript Booleans as Objects
+function booleanExample()
+{
+	let x = false; // this will be treated as a boolean
+	let y = new Boolean(false); // this will be trated as an object
+
+	document.getElementById("boolean-example1").innerHTML = typeof x; // returns boolean
+	document.getElementById("boolean-example2").innerHTML = typeof y; // returns object
+}
