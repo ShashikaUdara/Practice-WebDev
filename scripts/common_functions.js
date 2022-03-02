@@ -672,3 +672,9 @@ function booleanExample()
 	document.getElementById("boolean-example1").innerHTML = typeof x; // returns boolean
 	document.getElementById("boolean-example2").innerHTML = typeof y; // returns object
 }
+
+function getMonth()
+{
+	const arrMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+	document.getElementById("display-month").innerHTML = arrMonths[document.getElementById("select-month").value-1];
+}
