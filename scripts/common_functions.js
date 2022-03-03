@@ -678,3 +678,63 @@ function getMonth()
 	const arrMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 	document.getElementById("display-month").innerHTML = arrMonths[document.getElementById("select-month").value-1];
 }
+
+function switchExample()
+{
+	let month = "";
+	switch(parseInt(document.getElementById("month-select").value))
+	{
+		case 1:
+		month = "January";
+		break;
+		
+		case 2:
+		month = "February";
+		break;
+		
+		case 3:
+		month = "March";
+		break;
+		
+		case 4:
+		month = "April";
+		break;
+		
+		case 5:
+		month = "May";
+		break;
+		
+		case 6:
+		month = "June";
+		break;
+		
+		case 7:
+		month = "July";
+		break;
+		
+		case 8:
+		month = "August";
+		break;
+		
+		case 9:
+		month = "September";
+		break;
+		
+		case 10:
+		month = "October";
+		break;
+		
+		case 11:
+		month = "November";
+		break;
+		
+		case 12:
+		month = "December";
+		break;
+
+		default:
+		month = "Select a valied month";
+	}
+
+	document.getElementById("month-select-example").innerHTML = month;
+}
