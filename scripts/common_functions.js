@@ -763,7 +763,6 @@ function iterationExampleFor()
 	document.getElementById("month-list-for").innerHTML = temp;
 }
 
-
 // JavaScript For In Objects/Arrays and Array.forEach()
 const car = {
 	name: "Nissan FB15",
@@ -772,6 +771,8 @@ const car = {
 	milage: 150000,
 	maxSpeed: "180 km/h",
 };
+
+let globStrVal = "";
 
 function forInExampleObj()
 {
@@ -783,4 +784,42 @@ function forInExampleObj()
 	des += "</ul>";
 
 	document.getElementById("obj-description").innerHTML = des;
+}
+
+function forInExampleArr()
+{
+	const numbers = [45, 4, 9, 16, 25, 56, 67, 78, 43, 54, 76 ,87, 2];
+	let des = "<ul>";
+	for(let x in numbers)
+	{
+		des += `<li>${x}: ${numbers[x]}</li>`;
+	}
+	des += "</ul>";
+
+	document.getElementById("arr-description").innerHTML = des;
+}
+
+function forEachExampleObj()
+{
+	globStrVal = "<ul>";
+	Object.keys(car).forEach(forEachExampleObj_function);
+	document.getElementById("foreach-obj-description").innerHTML = globStrVal + "</ul>";
+}
+
+function forEachExampleObj_function(_value, _index, obj)
+{
+	globStrVal += `<li>${_index} ${_value} === ${car[_value]}=== --- ${obj}</li>`;
+}
+
+function forEachExampleArr()
+{
+	const numbers = [45, 4, 9, 16, 25, 56, 67, 78, 43, 54, 76 ,87, 2];
+	globStrVal = "<ul>";
+	numbers.forEach(forEachExampleArr_function);
+	document.getElementById("foreach-arr-description").innerHTML = globStrVal + "</ul>";
+}
+
+function forEachExampleArr_function(_value, _index, obj)
+{
+	globStrVal += `<li>${_index} ${_value} --- ${obj}</li>`;
 }
