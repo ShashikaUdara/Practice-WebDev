@@ -823,3 +823,71 @@ function forEachExampleArr_function(_value, _index, obj)
 {
 	globStrVal += `<li>${_index} ${_value} --- ${obj}</li>`;
 }
+
+// Looping over a String
+function loopOverStringExample_in()
+{
+	let myName = "Udara Abeyrathne";
+	// template
+	let temp = "<ul>";
+	for(let x in myName)
+	{
+		temp += `<li>${myName[x]}</li>`;
+	}
+	temp += "</ul>";
+	document.getElementById("loop-string-in").innerHTML = temp;
+}
+
+// Arrow function use
+function loopOverStringExample_forEach_ArrowFunction()
+{
+	// let myName = "Udara Abeyrathne"; // can't use forEach for stings
+	let myName = [45, 4, 9, 16, 25, 56, 67, 78, 43, 54, 76 ,87, 2];
+
+	// template
+	let temp = "<ul>";
+
+	myName.forEach((_element, _index, _array) => temp += `<li>${_index} : ${_element} : ${_array}</li>`);
+
+	temp += "</ul>";
+	document.getElementById("loop-string-foreach").innerHTML = temp;
+}
+
+
+// Callback function use
+function loopOverStringExample_forEach_CallbackFunction()
+{
+	// let myName = "Udara Abeyrathne"; // can't use forEach for stings
+	let myName = [45, 4, 9, 16, 25, 56, 67, 78, 43, 54, 76 ,87, 2];
+	// template
+	console.log(myName);
+
+	globStrVal = "<ul>";
+	myName.forEach(forEach_CallbackFunction);
+	globStrVal += "</ul>";
+
+	document.getElementById("loop-string-callBackFunction").innerHTML = globStrVal;
+}
+
+function forEach_CallbackFunction(_index, _value, _array)
+{
+	globStrVal += `<li>${_index} : ${_value} : ${_array}</li>`;
+}
+
+
+// Inline callback function use
+function loopOverStringExample_forEach_CallbackFunction_Inline()
+{
+	// let myName = "Udara Abeyrathne"; // can't use forEach for stings
+	let myName = [45, 4, 9, 16, 25, 56, 67, 78, 43, 54, 76 ,87, 2];
+
+	// template
+	globStrVal = "<ul>";
+	myName.forEach(function(_element, _index, _array){
+		globStrVal += `<li>${_element} : ${_index} : ${_array}</li>`
+	});
+	globStrVal += "</ul>";
+
+	document.getElementById("loop-string-callBackFunction-inline").innerHTML = globStrVal;
+	console.log(globStrVal);
+}
