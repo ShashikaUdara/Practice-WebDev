@@ -762,3 +762,25 @@ function iterationExampleFor()
 
 	document.getElementById("month-list-for").innerHTML = temp;
 }
+
+
+// JavaScript For In Objects/Arrays and Array.forEach()
+const car = {
+	name: "Nissan FB15",
+	age: 21,
+	color: "Siver",
+	milage: 150000,
+	maxSpeed: "180 km/h",
+};
+
+function forInExampleObj()
+{
+	let des = "<ul>";
+	for(let x in car)
+	{
+		des += `<li>${x}: ${car[x]}</li>`;
+	}
+	des += "</ul>";
+
+	document.getElementById("obj-description").innerHTML = des;
+}
