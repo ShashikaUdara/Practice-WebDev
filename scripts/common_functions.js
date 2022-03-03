@@ -738,3 +738,27 @@ function switchExample()
 
 	document.getElementById("month-select-example").innerHTML = month;
 }
+
+function iterationExampleFor()
+{
+	// 1st statment elemination
+	let i = 0;
+	mathArrLit = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+	let temp = "<ul>";
+	for(;i<mathArrLit.length; i++)
+	{
+		temp += `<li>Without 1st Statment: ${mathArrLit[i]}</li>`;
+	}
+	temp += "<li>-----------------------------</li>";
+
+	// 3rd statment elemination
+	let j = 0;
+	for(;j<mathArrLit.length; )
+	{
+		temp += `<li>Without 3rd Statment: ${mathArrLit[j]}</li>`;
+		j++;
+	}
+	temp += "</ul>";
+
+	document.getElementById("month-list-for").innerHTML = temp;
+}
