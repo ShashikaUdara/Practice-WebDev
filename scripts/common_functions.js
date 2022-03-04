@@ -847,7 +847,10 @@ function loopOverStringExample_forEach_ArrowFunction()
 	// template
 	let temp = "<ul>";
 
-	myName.forEach((_element, _index, _array) => temp += `<li>${_index} : ${_element} : ${_array}</li>`);
+	myName.forEach((_element, _index, _array) => 
+	{
+		temp += `<li>${_index} : ${_element} : ${_array}</li>`;
+	});
 
 	temp += "</ul>";
 	document.getElementById("loop-string-foreach").innerHTML = temp;
@@ -884,10 +887,30 @@ function loopOverStringExample_forEach_CallbackFunction_Inline()
 	// template
 	globStrVal = "<ul>";
 	myName.forEach(function(_element, _index, _array){
-		globStrVal += `<li>${_element} : ${_index} : ${_array}</li>`
+		globStrVal += `<li>${_element} : ${_index} : ${_array}</li>`;
 	});
 	globStrVal += "</ul>";
 
 	document.getElementById("loop-string-callBackFunction-inline").innerHTML = globStrVal;
 	console.log(globStrVal);
+}
+
+// differense betweel for/in and for/of
+function diffForInandForOf()
+{
+	monthArrLit = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+	globStrVal = "<ul><li>--------------For In case--------------</li>";
+	for(let x in monthArrLit)
+	{
+		globStrVal += `<li>${x} -- ${monthArrLit[x]}</li>`;
+	}
+	globStrVal += "<li>--------------For Of case>--------------</li>";
+	for(let y of monthArrLit)
+	{
+		globStrVal += `<li> --- ${y}</li>`;
+	}
+	globStrVal += "</ul>";
+
+	document.getElementById("diff-in-of-example").innerHTML = globStrVal;
 }
