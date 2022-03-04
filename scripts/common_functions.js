@@ -948,3 +948,24 @@ function doWhileExample()
 
 	document.getElementById("do-while-example").innerHTML = globStrVal;
 }
+
+// The Break and continue Statements
+function breadkAndContinueExample()
+{
+	// break statment will forcefully terminates the execution of the immediate loop completly.
+	let i = 0;
+	globStrVal = "<ul><li>--------------Break Example terminates from 5 onwards--------------</li>";
+	for(i=0;i<10;i++)
+	{
+		if(i+1 == 5) break;
+		globStrVal += `<li> --- ${i+1} --- </li>`;
+	}
+	globStrVal += "<li>--------------Continue Example avoids 5--------------</li>";
+	for(i=0;i<10;i++)
+	{
+		if(i+1 == 5) continue;
+		globStrVal += `<li> --- ${i+1} --- </li>`;
+	}
+	globStrVal += "</ul>";
+	document.getElementById("break-continue-example").innerHTML = globStrVal;
+}
