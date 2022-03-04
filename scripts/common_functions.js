@@ -914,3 +914,37 @@ function diffForInandForOf()
 
 	document.getElementById("diff-in-of-example").innerHTML = globStrVal;
 }
+
+// while example
+function whileExample()
+{
+	let i = 0;
+	monthArrLit = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+	globStrVal = "<ul><li>--------------While--------------</li>";
+	while(i < monthArrLit.length)
+	{
+		globStrVal += `<li>${monthArrLit[i]}</li>`;
+		i++;
+	}
+	globStrVal += "</ul>";
+
+	document.getElementById("while-example").innerHTML = globStrVal;
+}
+
+// do-while example
+function doWhileExample()
+{
+	let i = 0;
+	monthArrLit = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+	globStrVal = "<ul><li>--------------Do-While--------------</li>";
+	
+	do
+	{
+		globStrVal += `<li>${monthArrLit[i]}</li>`;
+		i++;
+	}
+	while(i < monthArrLit.length)
+	globStrVal += "</ul>";
+
+	document.getElementById("do-while-example").innerHTML = globStrVal;
+}
