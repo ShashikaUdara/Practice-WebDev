@@ -994,3 +994,28 @@ function lableExample()
 	document.getElementById("show-labled-list").innerHTML = textList;
 	console.log(typeof list);
 }
+
+// The For Of Loop
+function forOfLoopExample()
+{
+	const monthArrLit = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+	const myName = "Udara Abeyrathne";
+
+	let template = "<ul>";
+
+	// iterating over array
+	for(let x of monthArrLit)
+	{
+		template += `<li>${x}</li>`; 
+	}
+	template += "+++++++++++++++"; 
+
+	// iterating over string
+	for(let y of myName)
+	{
+		template += `<li>${y}</li>`; 
+	}
+	template += "</ul>";
+
+	document.getElementById("for-of-example").innerHTML = template;
+}
