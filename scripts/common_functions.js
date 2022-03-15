@@ -898,7 +898,7 @@ function loopOverStringExample_forEach_CallbackFunction_Inline()
 // differense betweel for/in and for/of
 function diffForInandForOf()
 {
-	monthArrLit = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+	const monthArrLit = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
 	globStrVal = "<ul><li>--------------For In case--------------</li>";
 	for(let x in monthArrLit)
@@ -968,4 +968,29 @@ function breadkAndContinueExample()
 	}
 	globStrVal += "</ul>";
 	document.getElementById("break-continue-example").innerHTML = globStrVal;
+}
+
+// JavaScript Labels
+function lableExample()
+{
+	const monthArrLit = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+	let textList = "";
+	list:
+	{
+		textList += monthArrLit[0] + "<br>";
+		textList += monthArrLit[1] + "<br>";
+		textList += monthArrLit[2] + "<br>";
+		textList += monthArrLit[3] + "<br>";
+		break list;
+		textList += monthArrLit[4] + "<br>";
+		textList += monthArrLit[5] + "<br>";
+		textList += monthArrLit[6] + "<br>";
+		textList += monthArrLit[7] + "<br>";
+		textList += monthArrLit[8] + "<br>";
+		textList += monthArrLit[9] + "<br>";
+		textList += monthArrLit[10] + "<br>";
+		textList += monthArrLit[11] + "<br>";
+	}
+	document.getElementById("show-labled-list").innerHTML = textList;
+	console.log(typeof list);
 }
