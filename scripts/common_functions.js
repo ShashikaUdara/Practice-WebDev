@@ -1019,3 +1019,19 @@ function forOfLoopExample()
 
 	document.getElementById("for-of-example").innerHTML = template;
 }
+
+
+// Iterating Over a Set
+function iteratingOverSetExample()
+{
+	const lettersOfName = new Set(['U','d','a','r','a','','A','b','e','y','r','a','t','h','n','e']);
+
+	let template = "<ul>";
+	for(let x of lettersOfName)
+	{
+		template += `<li>${x}</li>`; 
+	}
+	template += "</ul>";
+
+	document.getElementById("set-iteration-example").innerHTML = template;
+}
