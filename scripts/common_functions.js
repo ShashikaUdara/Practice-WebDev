@@ -1033,5 +1033,27 @@ function iteratingOverSetExample()
 	}
 	template += "</ul>";
 
+	// the output of this operation is a set, means that the some of the duplicate letters will be removed in the process.
 	document.getElementById("set-iteration-example").innerHTML = template;
+}
+
+// Iterating Over a Map
+function mapExample()
+{
+	const carMap = new Map([
+		["Nissan", 2005],
+		["Toyota", 2001],
+		["Peugeot", 1995],
+		["Audi", 2020],
+		["Mitsubishi", 2007],
+	]);
+
+	let template = "<ul>";
+	for(let x of carMap)
+	{
+		template += `<li>${x[0]} --- ${x[1]}</li>`; 
+	}
+	template += "</ul>";
+
+	document.getElementById("map-iteration-example").innerHTML = template;
 }
