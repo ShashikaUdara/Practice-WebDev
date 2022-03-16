@@ -1057,3 +1057,53 @@ function mapExample()
 
 	document.getElementById("map-iteration-example").innerHTML = template;
 }
+
+// javascript Sets
+function setExample()
+{
+	const carSet = new Set(["Nissan", "Toyota", "Peugeot"]);
+	carSet.add("Mitsubishi");
+	carSet.add("Honda");
+	carSet.add("Cadillac");
+	carSet.add("Daihutu");
+	carSet.add("Audi");
+
+	let template = "<ul>";
+	for(let x of carSet)
+	{
+		template += `<li>${x}</li>`; 
+	}
+	template += "</ul>";
+
+	document.getElementById("show-set-elements-example").innerHTML = template;
+
+	// for each
+	let text = "";
+	carSet.forEach(function(value, index, setE)
+	{
+		text += value + " : " + index + " : " + setE + "<br>";
+	});
+
+	document.getElementById("show-set-elements-forEach-example").innerHTML = text;
+	document.getElementById("show-set.values()-example").innerHTML = carSet.values();
+
+	template = "<br><br><ul>";
+	for(let x of carSet.values())
+	{
+		template += `<li>${x}</li>`; 
+	}
+	template += "</ul>";
+	document.getElementById("show-for-set.values()-example").innerHTML = template;
+	document.getElementById("show-for-set.has()-example").innerHTML = "carSet.has(Honda): " + carSet.has("Honda");
+	document.getElementById("show-for-set.delete()-example").innerHTML = "carSet.delete(Honda): " + carSet.delete("Honda");
+	document.getElementById("show-for-set.has()-after-delete-example").innerHTML = "carSet.has(Honda): " + carSet.has("Honda");
+
+	// after delete
+	template = "<br><br><ul>";
+	for(let x of carSet.values())
+	{
+		template += `<li>${x}</li>`; 
+	}
+	template += "</ul>";
+	document.getElementById("show-for-set.values()-afterDelete-example").innerHTML = template;
+}
