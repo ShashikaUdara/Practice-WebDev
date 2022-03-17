@@ -1170,4 +1170,34 @@ function setExample()
 	document.getElementById("show-for-set.values()-afterDelete-example").innerHTML = template;
 }
 
-// JavaScript Maps
+// JavaScript Type Conversion
+function typeConversionExample()
+{
+	// Converting Strings to Numbers
+	let template = "<ul>";
+	template +=`<li>Number("3.14"): ${Number("3.14")}</li>`;
+	template +=`<li>Number(" "): ${Number(" ")}</li>`;
+	template +=`<li>Number(""): ${Number("")}</li>`;
+	template +=`<li>Number("99 88"): ${Number("99 88")}</li>`;
+	template += "</ul>";
+	document.getElementById("typeConv-number-example").innerHTML = template;
+
+	// Number Methods
+	// parseFloat
+	template = "<ul>";
+	template +=`<li>parseFloat("3.14"): ${parseFloat("3.14")}</li>`;
+	template +=`<li>parseFloat(" "): ${parseFloat(" ")}</li>`;
+	template +=`<li>parseFloat(""): ${parseFloat("")}</li>`;
+	template +=`<li>parseFloat("99 88"): ${parseFloat("99 88")}</li>`;
+	template += "</ul>";
+	document.getElementById("typeConv-parseFloat-example").innerHTML = template;
+
+	// parseInt
+	template = "<ul>";
+	template +=`<li>parseInt("3.14"): ${parseInt("3.14")}</li>`;
+	template +=`<li>parseInt(" "): ${parseInt(" ")}</li>`;
+	template +=`<li>parseInt(""): ${parseInt("")}</li>`;
+	template +=`<li>parseInt("99 88"): ${parseInt("99 88")}</li>`;
+	template += "</ul>";
+	document.getElementById("typeConv-parseInt-example").innerHTML = template;
+}
