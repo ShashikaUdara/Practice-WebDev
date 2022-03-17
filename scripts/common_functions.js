@@ -1056,6 +1056,50 @@ function mapExample()
 	template += "</ul>";
 
 	document.getElementById("map-iteration-example").innerHTML = template;
+
+
+	// The set() Method
+	carMap.set("Cadillac", 1990);
+	carMap.set("Mazda", 1980);
+	carMap.set("RangeROver", 1945);
+	carMap.set("Benz", 1918);
+
+	template = "<ul>";
+	for(let x of carMap)
+	{
+		template += `<li>${x[0]} --- ${x[1]}</li>`; 
+	}
+	template += "</ul>";
+	document.getElementById("map.set()-example").innerHTML = template;
+
+	// The get() Method
+	template = "<ul>";
+	template += `<li>${carMap.get("Cadillac")}</li>`;
+	template += `<li>${carMap.get("Mazda")}</li>`;
+	template += `<li>${carMap.get("Benz")}</li>`;
+	template += "</ul>";
+	document.getElementById("map.get()-example").innerHTML = template;
+
+	// map.size
+	document.getElementById("map.size-example").innerHTML = carMap.size;
+
+	// map.has method - use#1
+	document.getElementById("map.has(Cadillac)-example1").innerHTML = "map.has(Cadillac)-example1 - " + carMap.has("Cadillac");
+
+	// The delete() Method
+	carMap.delete("Cadillac");
+	carMap.delete("Mazda");
+	carMap.delete("Benz");
+	template = "<ul>";
+	for(let x of carMap)
+	{
+		template += `<li>${x[0]} --- ${x[1]}</li>`; 
+	}
+	template += "</ul>";
+	document.getElementById("map.delete()-example").innerHTML = template;
+
+	// map.has method - use#2
+	document.getElementById("map.has(Cadillac)-example2").innerHTML = "map.has(Cadillac)-example2 - " + carMap.has("Cadillac");
 }
 
 // javascript Sets
@@ -1107,3 +1151,5 @@ function setExample()
 	template += "</ul>";
 	document.getElementById("show-for-set.values()-afterDelete-example").innerHTML = template;
 }
+
+// JavaScript Maps
