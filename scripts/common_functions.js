@@ -1100,6 +1100,24 @@ function mapExample()
 
 	// map.has method - use#2
 	document.getElementById("map.has(Cadillac)-example2").innerHTML = "map.has(Cadillac)-example2 - " + carMap.has("Cadillac");
+
+	// The forEach() Method
+	template = "<ul>";
+	carMap.forEach(function(key, value)
+	{
+		template += `<li>${key} = ${value}</li>`;
+	})
+	template += "</ul>";
+	document.getElementById("map.forEach()-example").innerHTML = template;
+
+	// The entries() Method
+	template = "<ul>";
+	for(const i of carMap.entries())
+	{
+		template += `<li>${i} = ${i[0]} and ${i[1]}</li>`;
+	}
+	template += "</ul>";
+	document.getElementById("map.entries()-example").innerHTML = template;
 }
 
 // javascript Sets
