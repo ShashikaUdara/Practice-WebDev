@@ -1201,3 +1201,46 @@ function typeConversionExample()
 	template += "</ul>";
 	document.getElementById("typeConv-parseInt-example").innerHTML = template;
 }
+
+// Operator impacts
+function unaryOperatorExample()
+{
+	// The Unary + Operator
+	let sA = "12.25";
+	let iA = sA;
+	let iB = + sA;
+
+	console.log("sA: " + typeof sA);
+	console.log("iA: " + typeof iA);
+	console.log("iB: " + typeof iB);
+
+	// Converting Numbers to Strings
+	console.log("String(123): " + typeof String(123));
+	console.log("String(123.25): " + typeof String(123.25));
+	console.log("String(1.23E5): " + typeof String(1.23E5));
+	console.log("String(99+26): " + typeof String(99+26));
+	console.log("String(): " + typeof String());
+
+	// Converting Dates to Numbers
+	console.log("Todays date converted to Number: " + Number(new Date()));
+	console.log("Todays date converted to Time: " + (new Date()).getTime());
+	console.log("Todays date converted to Time -> Number: " + Number((new Date()).getTime()));
+
+	// date to string
+	console.log("Date converted to String: " + Date().toString());
+
+	// Converting Booleans to Numbers
+	console.log("Number(true): " + Number(true));
+	console.log("Number(false): " + Number(false));
+
+	// Converting Booleans to Strings
+	console.log("String(true): " + String(true));
+	console.log("String(false): " + String(false));
+
+	// Automatic Type Conversion
+	console.log('5 + null :- ' + 5 + null );
+	console.log('"5" + null :- ' + "5" + null );
+	console.log('"5" + 2 :- ' + "5" + 2 );
+	console.log('"5" - 2 :- ' + "5" - 2 );
+	console.log('"5" * "2" :- ' + "5" * "2" );
+}
